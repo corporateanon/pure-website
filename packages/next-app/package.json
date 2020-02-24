@@ -1,0 +1,22 @@
+{
+  "name": "@pure-website/next-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "9.2.2",
+    "next-transpile-modules": "^3.0.2",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "@pure-website/ui-components": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.4",
+    "@types/react": "^16.9.22",
+    "typescript": "^3.8.2"
+  }
+}

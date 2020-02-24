@@ -1,0 +1,15 @@
+{
+    "name": "pure-website",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "version": "0.0.1",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "dev": "yarn workspace @pure-website/next-app dev",
+        "build": "yarn workspace @pure-website/next-app build",
+        "test": "yarn workspace @pure-website/unit-tests run test"
+    }
+}
