@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Artist, ArtistEventList } from '@pure-website/io/BandsInTown';
+import { Artist, ArtistEventList } from '@pure-website/types/bandsInTownTypes';
 
 interface IHomeProps {
     artist: Artist;

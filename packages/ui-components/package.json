@@ -2,5 +2,8 @@
     "name": "@pure-website/ui-components",
     "private": true,
     "version": "0.0.1",
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {
+        "@pure-website/types": "^0.0.1"
+    }
 }
