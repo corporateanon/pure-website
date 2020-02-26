@@ -4,7 +4,8 @@
     "version": "0.0.1",
     "license": "MIT",
     "dependencies": {
-        "@pure-website/types": "^0.0.1"
+        "@pure-website/types": "^0.0.1",
+        "@pure-website/effects": "^0.0.1"
     },
     "peerDependencies": {
         "react": ">16.8.0"

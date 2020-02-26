@@ -1,0 +1,12 @@
+{
+    "name": "@pure-website/effects",
+    "version": "0.0.1",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "lodash": "^4.17.15"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.149"
+    }
+}

@@ -3,16 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "dev": "next dev",
     "start": "next start"
   },
   "dependencies": {
+    "@pure-website/effects": "^0.0.1",
+    "@pure-website/types": "^0.0.1",
     "next": "9.2.2",
     "next-transpile-modules": "^3.0.2",
     "react": "16.12.0",
-    "react-dom": "16.12.0",
-    "@pure-website/types": "^0.0.1"
+    "react-dom": "16.12.0"
   },
   "devDependencies": {
     "@types/node": "^13.7.4",
