@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page should match snapshot 1`] = `
+Array [
+  <div>
+    <input
+      onChange={[Function]}
+      type="text"
+      value="hello world!"
+    />
+  </div>,
+  <article>
+    <h3>
+      x
+    </h3>
+    <p>
+      <img
+        src="x"
+      />
+    </p>
+  </article>,
+  <article>
+    <p>
+      <strong>
+        y
+      </strong>
+    </p>
+    <p>
+      date
+    </p>
+  </article>,
+]
+`;

@@ -7,8 +7,8 @@ const { Provider: SearchProvider } = searchContext;
 interface HomeProps {
     artist?: Artist;
     events?: ArtistEventList;
-    searchQuery?: string;
-    actionSearch?: (q: string) => void;
+    searchQuery: string;
+    actionSearch: (q: string) => void;
 }
 
 const Home = ({ artist, events, actionSearch, searchQuery }: HomeProps) => {

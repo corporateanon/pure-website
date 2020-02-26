@@ -30,31 +30,14 @@ describe('Home page', () => {
         ];
 
         const tree = create(
-            <Home artist={artist} events={eventsList} />
-        ).toJSON();
-        expect(tree).toMatchInlineSnapshot(`
-      Array [
-        <article>
-          <h3>
-            x
-          </h3>
-          <p>
-            <img
-              src="x"
+            <Home
+                artist={artist}
+                events={eventsList}
+                actionSearch={() => {}}
+                searchQuery="hello world!"
             />
-          </p>
-        </article>,
-        <article>
-          <p>
-            <strong>
-              y
-            </strong>
-          </p>
-          <p>
-            date
-          </p>
-        </article>,
-      ]
-    `);
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
     });
 });

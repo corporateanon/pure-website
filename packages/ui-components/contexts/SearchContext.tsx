@@ -5,6 +5,9 @@ export interface SearchContextProps {
     value: string | null;
 }
 
-const searchContext = createContext<SearchContextProps>({});
+const searchContext = createContext<SearchContextProps>({
+    actionChange: () => {},
+    value: ''
+});
 
 export { searchContext };
