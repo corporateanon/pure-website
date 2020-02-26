@@ -9,25 +9,24 @@ Array [
       value="hello world!"
     />
   </div>,
-  <article>
-    <h3>
-      x
-    </h3>
-    <p>
+  <div>
+    <div>
+      <h3>
+        Doctor Who
+      </h3>
+      <div>
+        Starts: "
+        1963-11-23
+        "
+      </div>
+      <div>
+        Ends: "
+        "
+      </div>
       <img
-        src="x"
+        src="https://static.episodate.com/images/tv-show/thumbnail/3283.jpg"
       />
-    </p>
-  </article>,
-  <article>
-    <p>
-      <strong>
-        y
-      </strong>
-    </p>
-    <p>
-      date
-    </p>
-  </article>,
+    </div>
+  </div>,
 ]
 `;

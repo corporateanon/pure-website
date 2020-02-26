@@ -1,17 +1,16 @@
 import * as React from 'react';
-import { Artist, ArtistEventList } from '@pure-website/types/bandsInTownTypes';
 import SearchInput from '../controls/SearchInput';
 import { searchContext } from '../contexts/SearchContext';
 const { Provider: SearchProvider } = searchContext;
+import { EpisodateSearchResult } from '@pure-website/types/episodateTypes';
 
 interface HomeProps {
-    artist?: Artist;
-    events?: ArtistEventList;
+    searchResult: EpisodateSearchResult | null;
     searchQuery: string;
     actionSearch: (q: string) => void;
 }
 
-const Home = ({ artist, events, actionSearch, searchQuery }: HomeProps) => {
+const Home = ({ searchResult, actionSearch, searchQuery }: HomeProps) => {
     return (
         <>
             <SearchProvider
@@ -23,23 +22,24 @@ const Home = ({ artist, events, actionSearch, searchQuery }: HomeProps) => {
                 <div>
                     <SearchInput />
                 </div>
-                {artist && (
-                    <article>
-                        <h3>{artist.name}</h3>
-                        <p>
-                            <img src={artist.thumb_url} />
-                        </p>
-                    </article>
-                )}
-                {events &&
-                    events.map((event, i) => (
-                        <article key={i}>
-                            <p>
-                                <strong>{event.description}</strong>
-                            </p>
-                            <p>{event.datetime}</p>
-                        </article>
-                    ))}
+                <div>
+                    {searchResult
+                        ? searchResult.tv_shows.map((show, i) => {
+                              return (
+                                  <div key={i}>
+                                      <h3>{show.name}</h3>
+                                      <div>Starts: "{show.start_date}"</div>
+                                      <div>Ends: "{show.end_date}"</div>
+                                      {show.image_thumbnail_path ? (
+                                          <img
+                                              src={show.image_thumbnail_path}
+                                          />
+                                      ) : null}
+                                  </div>
+                              );
+                          })
+                        : null}
+                </div>
             </SearchProvider>
         </>
     );

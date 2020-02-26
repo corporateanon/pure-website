@@ -1,13 +1,12 @@
 import Home from '@pure-website/ui-components/pages/Home';
-import BandsInTown from '@pure-website/io/BandsInTown';
+import Episodate from '@pure-website/io/Episodate';
 import { useSearch } from '@pure-website/effects/Search';
 
-const HomePage = ({ artist, events }) => {
+const HomePage = ({ searchResult }) => {
     const search = useSearch();
     return (
         <Home
-            artist={artist}
-            events={events}
+            searchResult={searchResult}
             actionSearch={search.actionSearch}
             searchQuery={search.value}
         />
@@ -16,18 +15,12 @@ const HomePage = ({ artist, events }) => {
 
 HomePage.getInitialProps = async ({ query: { q } }) => {
     const artistName = q;
-    const api = new BandsInTown();
+    const api = new Episodate();
 
-    const [artist, events] = q
-        ? await Promise.all([
-              api.getArtist(artistName),
-              api.getEvents(artistName)
-          ])
-        : [];
+    const searchResult = q ? await api.search(q, 1) : null;
 
     return {
-        artist,
-        events
+        searchResult
     };
 };
 
