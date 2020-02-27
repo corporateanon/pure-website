@@ -25,19 +25,19 @@ const Home = ({ searchResult, actionSearch, searchQuery }: HomeProps) => {
                 <div>
                     {searchResult
                         ? searchResult.tv_shows.map((show, i) => {
-                              return (
-                                  <div key={i}>
-                                      <h3>{show.name}</h3>
-                                      <div>Starts: "{show.start_date}"</div>
-                                      <div>Ends: "{show.end_date}"</div>
-                                      {show.image_thumbnail_path ? (
-                                          <img
-                                              src={show.image_thumbnail_path}
-                                          />
-                                      ) : null}
-                                  </div>
-                              );
-                          })
+                            return (
+                                <div key={i}>
+                                    <h3>{show.name}</h3>
+                                    <div>Starts: {show.start_date}</div>
+                                    <div>Ends: {show.end_date}</div>
+                                    {show.image_thumbnail_path ? (
+                                        <img
+                                            src={show.image_thumbnail_path}
+                                        />
+                                    ) : null}
+                                </div>
+                            );
+                        })
                         : null}
                 </div>
             </SearchProvider>

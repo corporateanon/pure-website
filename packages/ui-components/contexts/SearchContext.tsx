@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import { createContext } from 'react';
 
 export interface SearchContextProps {
     actionChange: (q: string) => void;

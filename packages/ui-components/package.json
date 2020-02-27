@@ -7,7 +7,12 @@
         "@pure-website/types": "^0.0.1",
         "@pure-website/effects": "^0.0.1"
     },
+    "devDependencies": {
+        "@pure-website/eslint-config": "^0.0.1"
+    },
     "peerDependencies": {
         "react": ">16.8.0"
+    },"scripts": {
+        "lint":"eslint **/*.{ts,tsx,js,jsx}"
     }
 }
