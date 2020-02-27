@@ -1,0 +1,2 @@
+extends:
+  - '@pure-website/eslint-config/typescript-react-functional'
