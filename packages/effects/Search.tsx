@@ -1,6 +1,4 @@
-import { debounce } from 'lodash';
-import React, { createContext, useState, useCallback } from 'react';
-import Router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import { isArray } from 'lodash';
 
 export interface Search {
