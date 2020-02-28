@@ -6,7 +6,9 @@ import getConfig from 'next/config';
 
 const HomePage = ({ searchResult }) => {
     const search = useSearch();
-    const firebaseAuth = useFirebaseAuth(getConfig().publicRuntimeConfig.firebaseConfig);
+    const firebaseAuth = useFirebaseAuth(
+        getConfig().publicRuntimeConfig.firebaseConfig
+    );
     return (
         <Home
             searchResult={searchResult}
@@ -18,11 +20,8 @@ const HomePage = ({ searchResult }) => {
 };
 
 HomePage.getInitialProps = async ({ query: { q } }) => {
-    const artistName = q;
-    const api = new Episodate();
-
-    const searchResult = q ? await api.search(q, 1) : null;
-
+    const episodate = new Episodate();
+    const searchResult = q ? await episodate.search(q, 1) : null;
     return {
         searchResult
     };
