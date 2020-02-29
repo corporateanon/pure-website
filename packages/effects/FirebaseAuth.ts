@@ -46,6 +46,9 @@ export const useFirebaseAuth = (
         doAuth: async () => {
             const provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider);
+        },
+        logout: async () => {
+            return firebase.auth().signOut();
         }
     };
 };

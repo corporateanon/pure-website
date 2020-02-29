@@ -1,12 +1,8 @@
 import { useRouter } from 'next/router';
 import { isArray } from 'lodash';
+import { SearchEffectProps } from '@pure-website/types/searchTypes';
 
-export interface Search {
-    actionSearch: (q: string) => void;
-    value: string | null;
-}
-
-export const useSearch = (): Search => {
+export const useSearch = (): SearchEffectProps => {
     const {
         replace,
         query: { q }
@@ -15,7 +11,7 @@ export const useSearch = (): Search => {
     const value = isArray(q) ? q[0] : q;
 
     return {
-        actionSearch: (q: string) => {
+        onSearch: (q: string) => {
             console.log('Search:', q);
             replace({ pathname: '/', query: { q } });
         },

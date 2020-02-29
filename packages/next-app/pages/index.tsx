@@ -12,8 +12,7 @@ const HomePage = ({ searchResult }) => {
     return (
         <Home
             searchResult={searchResult}
-            actionSearch={search.actionSearch}
-            searchQuery={search.value}
+            search={search}
             firebaseAuth={firebaseAuth}
         />
     );

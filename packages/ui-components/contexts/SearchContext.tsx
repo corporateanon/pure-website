@@ -1,12 +1,8 @@
 import { createContext } from 'react';
+import { SearchEffectProps } from '@pure-website/types/searchTypes';
 
-export interface SearchContextProps {
-    actionChange: (q: string) => void;
-    value: string | null;
-}
-
-const searchContext = createContext<SearchContextProps>({
-    actionChange: () => {},
+const searchContext = createContext<SearchEffectProps>({
+    onSearch: () => {},
     value: ''
 });
 
