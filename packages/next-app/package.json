@@ -10,7 +10,7 @@
   "dependencies": {
     "@pure-website/effects": "^0.0.1",
     "@pure-website/types": "^0.0.1",
-    "next": "9.2.2",
+    "next": "11.1.0",
     "next-transpile-modules": "^3.0.2",
     "react": "16.12.0",
     "react-dom": "16.12.0"
